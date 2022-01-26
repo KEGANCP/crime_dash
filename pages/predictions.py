@@ -14,15 +14,15 @@ from datetime import datetime as dt
 
 
 
-import pickle as pickle 
-import os
-# model = pickle.load(open('pipeline2.joblib', 'rb'))
+# import pickle as pickle 
+# import os
+# # model = pickle.load(open('pipeline2.joblib', 'rb'))
 
-# filename = "pipeline2.joblib"
-# os.makedirs(os.path.dirname(filename), exist_ok=True)
-# predic = 'pipeline2.joblib'
-with open('pipeline2.joblib', 'rb') as f:
-    pipeline = pickle.load(f)
+# # filename = "pipeline2.joblib"
+# # os.makedirs(os.path.dirname(filename), exist_ok=True)
+# # predic = 'pipeline2.joblib'
+# with open('pipeline2.joblib', 'rb') as f:
+#     pipeline = pickle.load(f)
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -252,9 +252,9 @@ def predict (Community_Area,
         Weekday]]
     )
 
-    y_pred = pipeline.predict(df)[0]
+#     y_pred = pipeline.predict(df)[0]
 
-    output1 = f'{y_pred:.0f}'
+#     output1 = f'{y_pred:.0f}'
     
 
     output2 = daq.Gauge(id='my-daq-gauge',

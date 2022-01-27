@@ -5,14 +5,12 @@ import dash_core_components as dcc
 from dash import html
 from dash.dependencies import Input, Output
 import dash_daq as daq
+import sklearn
+import joblib
 from joblib import load
+# from sklearn.externals import joblib
 import pandas as pd
 from datetime import datetime as dt
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-pipeline = joblib.load ('assets/model.joblib')
-from datetime import datetime as dt
-# Imports from this application
-from app import 
 
 
 
@@ -27,9 +25,9 @@ from app import
 #     pipeline = pickle.load(f)
 
 
-# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-# import joblib
-# pipeline = joblib.load ('assets/model.joblib')
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+import joblib
+pipeline = joblib.load ('assets/model.joblib')
 
 
 

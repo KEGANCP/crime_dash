@@ -257,15 +257,15 @@ def predict (Community_Area,
     output1 = f'{y_pred:.0f}'
     
 
-    output2 = daq.Gauge(id='my-daq-gauge',
-                        showCurrentValue=True,
-                        units="Crimes",
-                        max=50,
-                        value=y_pred,
-                        min=0,
-                        color={"gradient":True,"ranges":{"teal":[0,10],"blue":[10,20],"magenta":[20,50]}},
-                        size=400)  
-    return output1, output2
+#     output2 = daq.Gauge(id='my-daq-gauge',
+#                         showCurrentValue=True,
+#                         units="Crimes",
+#                         max=50,
+#                         value=y_pred,
+#                         min=0,
+#                         color={"gradient":True,"ranges":{"teal":[0,10],"blue":[10,20],"magenta":[20,50]}},
+#                         size=400)  
+    return output1 #, output2
 # @app.callback(
 #     dash.dependencies.Output('my-daq-gauge', 'value'),
 #     [dash.dependencies.Input('prediction-content','children')]

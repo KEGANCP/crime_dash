@@ -21,13 +21,13 @@ from datetime import datetime as dt
 # # filename = "pipeline2.joblib"
 # # os.makedirs(os.path.dirname(filename), exist_ok=True)
 # # predic = 'pipeline2.joblib'
-# with open('pipeline2.joblib', 'rb') as f:
+# with open('assets/line2.joblib', 'rb') as f:
 #     pipeline = pickle.load(f)
 
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-# import joblib
-# pipeline = joblib.load ('pipeline2.joblib')
+import joblib
+pipeline = joblib.load ('assets/pipeline2.joblib')
 
 
 
@@ -252,9 +252,9 @@ def predict (Community_Area,
         Weekday]]
     )
 
-#     y_pred = pipeline.predict(df)[0]
+    y_pred = pipeline.predict(df)[0]
 
-#     output1 = f'{y_pred:.0f}'
+    output1 = f'{y_pred:.0f}'
     
 
     output2 = daq.Gauge(id='my-daq-gauge',

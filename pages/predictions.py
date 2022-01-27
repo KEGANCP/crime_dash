@@ -215,7 +215,7 @@ column2 = dbc.Col(
 
         html.Br(),
 
-    html.Div(id='prediction-label', children=[], className='lead mt-5', style={'fontWeight': 'bold', 'fontSize': '1px', 'position': 'relative', 'left': '180px', 'bottom': '82px'})
+    html.Div(id='prediction-label', className='lead mt-5', style={'fontWeight': 'bold', 'fontSize': '1px', 'position': 'relative', 'left': '180px', 'bottom': '82px'})
         
     ]
 )
@@ -256,19 +256,19 @@ def predict (Community_Area,
 
     output1 = f'{y_pred:.0f}'
     
-
-    output2 = daq.Gauge(id='my-daq-gauge',
-                        showCurrentValue=True,
-                        units="Crimes",
-                        max=50,
-                        value=y_pred,
-                        min=0,
-                        color={"gradient":True,"ranges":{"teal":[0,10],"blue":[10,20],"magenta":[20,50]}},
-                        size=400)  
+    output2= print(f'There is likelyhood of {y_pred:} crimes on average.')
+#     output2 = daq.Gauge(id='my-daq-gauge',
+#                         showCurrentValue=True,
+#                         units="Crimes",
+#                         max=50,
+#                         value=y_pred,
+#                         min=0,
+#                         color={"gradient":True,"ranges":{"teal":[0,10],"blue":[10,20],"magenta":[20,50]}},
+#                         size=400)  
     return output1, output2
-@app.callback(
-    dash.dependencies.Output('my-daq-gauge', 'value'),
-    [dash.dependencies.Input('prediction-content','children')]
-)
+# @app.callback(
+#     dash.dependencies.Output('my-daq-gauge', 'value'),
+#     [dash.dependencies.Input('prediction-content','children')]
+# )
 def update_output(value):
     return value

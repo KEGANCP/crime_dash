@@ -2,15 +2,17 @@
 import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
-from dash import html
+import dash_html_components as html
 from dash.dependencies import Input, Output
 import dash_daq as daq
-import sklearn
-import joblib
 from joblib import load
-# from sklearn.externals import joblib
 import pandas as pd
 from datetime import datetime as dt
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+pipeline = joblib.load ('assets/model.joblib')
+from datetime import datetime as dt
+# Imports from this application
+from app import 
 
 
 
@@ -25,9 +27,9 @@ from datetime import datetime as dt
 #     pipeline = pickle.load(f)
 
 
-external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
-import joblib
-pipeline = joblib.load ('assets/pipeline2.joblib')
+# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+# import joblib
+# pipeline = joblib.load ('assets/model.joblib')
 
 
 
@@ -256,15 +258,15 @@ def predict (Community_Area,
 
     output1 = f'{y_pred:.0f}'
     
-    output2= print(f'There is likelyhood of {y_pred:} crimes on average.')
-#     output2 = daq.Gauge(id='my-daq-gauge',
-#                         showCurrentValue=True,
-#                         units="Crimes",
-#                         max=50,
-#                         value=y_pred,
-#                         min=0,
-#                         color={"gradient":True,"ranges":{"teal":[0,10],"blue":[10,20],"magenta":[20,50]}},
-#                         size=400)  
+    
+    output2 = daq.Gauge(id='my-daq-gauge',
+                        showCurrentValue=True,
+                        units="Crimes",
+                        max=50,
+                        value=y_pred,
+                        min=0,
+                        color={"gradient":True,"ranges":{"teal":[0,10],"blue":[10,20],"magenta":[20,50]}},
+                        size=400)  
     return output1, output2
 # @app.callback(
 #     dash.dependencies.Output('my-daq-gauge', 'value'),

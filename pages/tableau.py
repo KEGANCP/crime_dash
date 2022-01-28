@@ -38,7 +38,7 @@ column2 = dbc.Container(
     )
 )
 
-column2 = dbc.Container(
+column3 = dbc.Container(
     dbc.Row(
         dbc.Col(
             html.P(
@@ -54,4 +54,4 @@ column2 = dbc.Container(
     )
 )
 
-layout = dbc.Row([column1, column2])
+layout = dbc.Row([column1, column2, column3])

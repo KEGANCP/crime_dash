@@ -8,10 +8,18 @@ from dash.dependencies import Input, Output
 # Imports from this application
 from app import app
 
+# 1 column layout
+column1 = dbc.Col(
+    [
+        dcc.Markdown(
+            """
+        
+            ## GitHub
+            Get more details from our repo at http://https://github.com/KEGANCP/Crime_Predictions_In_Chicago
+            """
+        ),
 
-app.layout = html.Div([
-    html.A("Tableau Dashboard", href='https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link', target="_blank")
-])
+    ],
+)
 
-if __name__ == '__main__':
-    app.run_server(debug=True)
+layout = dbc.Row([column1])

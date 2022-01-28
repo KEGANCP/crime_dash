@@ -44,7 +44,7 @@ column3 = dbc.Container(
             html.P(
                 [
                     html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
-                    html.Iframe(src="https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+                    html.Iframe(src="https://public.tableau.com/app/profile/austen.marden/viz/chicago_crime_story_2/ChicagoCrimeDashboard?publish=yes",
                                 style={"height": "1067px", "width": "100%"})
                 ], 
                 className='lead'

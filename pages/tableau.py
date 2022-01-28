@@ -27,7 +27,7 @@ column2 = dbc.Container(
         dbc.Col(
             html.P(
                 [
-                    html.Span('Chicago Crime Visuals!', className='mr-2'), 
+                    html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
                     html.A(html.Button('VIEW!', className='three columns'),
                         href='https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link')
                 ], 

@@ -32,8 +32,26 @@ column2 = dbc.Container(
                         href='https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link')
                 ], 
                 className='lead'
+               
             )
         )
     )
 )
+
+column2 = dbc.Container(
+    dbc.Row(
+        dbc.Col(
+            html.P(
+                [
+                    html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
+                    html.Iframe(src="https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link",
+                                style={"height": "1067px", "width": "100%"})
+                ], 
+                className='lead'
+               
+            )
+        )
+    )
+)
+
 layout = dbc.Row([column1, column2])

@@ -10,7 +10,7 @@ import base64
 from app import app
 
 image_filename = 'tab.png' 
-tab = base64.b64encode(open(tab.png, 'rb').read())
+tab = base64.b64encode(open(image_filename, 'rb').read())
 
 # 1 column layout
 column1 = dbc.Col(

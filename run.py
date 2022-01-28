@@ -6,7 +6,7 @@ from dash.dependencies import Input, Output
 
 # Imports from this application
 from app import app, server
-from pages import index, predictions, GitHub
+from pages import index, predictions, GitHub, tableau
 
 # Navbar 
 navbar = dbc.NavbarSimple(
@@ -15,6 +15,7 @@ navbar = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
         dbc.NavItem(dcc.Link('GitHub', href='/GitHub', className='nav-link')), 
+        dbc.NavItem(dcc.Link('Tableau', href='/tableau', className='nav-link'))
     ],
     sticky='top',
     color='dark', 
@@ -43,10 +44,13 @@ def display_page(pathname):
         return predictions.layout
     elif pathname == '/GitHub':
         return GitHub.layout
+     elif pathname == '/Tableau':
+        return tableau.layout       
     else:
         return dcc.Markdown('## Page not found')
 
 # Run app server
 if __name__ == '__main__':
     app.run_server(debug=True)
+
 

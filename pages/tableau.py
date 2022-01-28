@@ -22,9 +22,17 @@ column1 = dbc.Col(
     ],
 )
 
-column2 = dbc.Col(
-    html.A(html.Button('Chicago Crime & weather Visualizations!', className='three columns'),
-    href='https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link')
-),
-
+column2 = dbc.Container(
+    dbc.Row(
+        dbc.Col(
+            html.P(
+                [
+                    html.Span('Chicago Crime Visuals!', className='mr-2'), 
+                    html.A(html.I(className='fas fa-envelope-square mr-1'), href='https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link'), 
+                ], 
+                className='lead'
+            )
+        )
+    )
+)
 layout = dbc.Row([column1, column2])

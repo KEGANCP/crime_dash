@@ -8,25 +8,10 @@ from dash.dependencies import Input, Output
 # Imports from this application
 from app import app
 
+
 app.layout = html.Div([
-    html.Div(id='target'),
-    dcc.Dropdown(
-        id='dropdown',
-        options=[
-            {'label': 'Video 1', 'value': 'video1'},
-            {'label': 'Video 2', 'value': 'video2'},
-            {'label': 'Video 3', 'value': 'video3'},
-        ],
-        value='video1'
-    )
+    html.A("Tableau Dashboard", href='https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link', target="_blank")
 ])
 
-
-@app.callback(Output('target', 'children'), [Input('dropdown', 'value')])
-def embed_iframe(value):
-    videos = {
-        'video1': 'sea2K4AuPOk',
-        'video2': '5BAthiN0htc',
-        'video3': 'e4ti2fCpXMI',
-    }
-    return html.Iframe(src=f'https://www.youtube.com/embed/{videos[value]}')
+if __name__ == '__main__':
+    app.run_server(debug=True)

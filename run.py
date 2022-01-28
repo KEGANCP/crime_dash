@@ -44,7 +44,7 @@ def display_page(pathname):
         return predictions.layout
     elif pathname == '/GitHub':
         return GitHub.layout
-    elif pathname == '/Tableau':
+    elif pathname == '/tableau':
         return tableau.layout       
     else:
         return dcc.Markdown('## Page not found')

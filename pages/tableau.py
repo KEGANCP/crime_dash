@@ -22,4 +22,9 @@ column1 = dbc.Col(
     ],
 )
 
-layout = dbc.Row([column1])
+column2 = dbc.Col(
+    html.A(html.Button('Chicago Crime & weather Visualizations!', className='three columns'),
+    href='https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link')
+),
+
+layout = dbc.Row([column1, column2])

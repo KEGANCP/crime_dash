@@ -231,24 +231,28 @@ layout = dbc.Row([column1, column2])
     
 def predict (Community_Area,
              Average_Temperature,
-             date):
+             date_picked):
     # Convert the date from a string to a Timestamp
-# Month = date_picked.month
-# Day = date_picked.day
-# Weekday = date_picked.dayofweek 
-#     assert type(date_picked) == str
-#     date_picked = pd.to_datetime(date_picked)
-#     assert type(date_picked) == pd.Timestamp
+    Month = date_picked.month
+    Day = date_picked.day
+    Weekday = date_picked.dayofweek 
+    assert type(date_picked) == str
+    date_picked = pd.to_datetime(date_picked)
+    assert type(date_picked) == pd.Timestamp
     # Extract the month, day, weekday
 
     # Construct a dateframe with all features
     df=pd.DataFrame(
         columns = ['Community_Area',
                    'Average_Temperature',
-                   'date'],
+                   'Month',
+                   'Day',
+                   'Weekday'],
         data =[[Community_Area,
         Average_Temperature,
-        date]]
+        Month,
+        Day,
+        Weekday]]
     )
 
     y_pred = pipeline.predict(df)[0]

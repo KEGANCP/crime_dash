@@ -231,7 +231,9 @@ layout = dbc.Row([column1, column2])
     
 def predict (Community_Area,
              Average_Temperature,
-             date_picked):
+             Month,
+             Day,
+             Weekday):
     # Convert the date from a string to a Timestamp
 
     assert type(date_picked) == str

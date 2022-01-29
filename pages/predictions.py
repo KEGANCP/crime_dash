@@ -266,7 +266,7 @@ def predict (Community_Area,
                         value=y_pred,
                         min=0,
                         color={"gradient":True,"ranges":{"teal":[0,10],"blue":[10,20],"magenta":[20,50]}},
-                        size=400)  
+                        size=600)  
     return output1 , output2
 # @app.callback(
 #     dash.dependencies.Output('my-daq-gauge', 'value'),

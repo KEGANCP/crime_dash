@@ -265,7 +265,7 @@ def predict (Community_Area,
                         max=700,
                         value=y_pred,
                         min=0,
-                        color={"gradient":True,"ranges":{"teal":[0,10],"blue":[10,20],"magenta":[20,50]}},
+                        color={"gradient":True,"ranges":{"teal":[0,250],"blue":[250,500],"magenta":[500,700]}},
                         size=600)  
     return output1 , output2
 # @app.callback(

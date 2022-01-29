@@ -42,29 +42,14 @@ column2 = dbc.Container(
     )
 )
 
-# column3 = dbc.Container(
-#     dbc.Row(
-#         dbc.Col(
-#             html.P(
-#                 [
-#                     html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
-#                     html.Iframe(src="https://public.tableau.com/app/profile/austen.marden/viz/chicago_crime_story_2/ChicagoCrimeDashboard?publish=yes",
-#                                 style={"height": "1067px", "width": "100%"})
-#                 ], 
-#                 className='lead'
-               
-#             )
-#         )
-#     )
-# )
-
 column3 = dbc.Container(
     dbc.Row(
         dbc.Col(
             html.P(
                 [
                     html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
-                    html.Img((src='data:image/png;base64,{}'.format(tab))
+                    html.Iframe(src="https://public.tableau.com/app/profile/austen.marden/viz/chicago_crime_story_2/ChicagoCrimeDashboard?publish=yes",
+                                style={"height": "1067px", "width": "100%"})
                 ], 
                 className='lead'
                
@@ -72,5 +57,20 @@ column3 = dbc.Container(
         )
     )
 )
+
+# column3 = dbc.Container(
+#     dbc.Row(
+#         dbc.Col(
+#             html.P(
+#                 [
+#                     html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
+#                     html.Img((src='data:image/png;base64,{}'.format(tab))
+#                 ], 
+#                 className='lead'
+               
+#             )
+#         )
+#     )
+# )
 
 layout = dbc.Row([column1, column2, column3])

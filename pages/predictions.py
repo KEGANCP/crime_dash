@@ -227,9 +227,9 @@ layout = dbc.Row([column1, column2])
     Input('Average_Temperature', 'value'),
     Input('date-picker-single', 'date')],
 )
-Month = date_picked.month
-Day = date_picked.day
-Weekday = date_picked.dayofweek 
+# Month = date_picked.month
+# Day = date_picked.day
+# Weekday = date_picked.dayofweek 
     
 def predict (Community_Area,
              Average_Temperature,

@@ -236,23 +236,19 @@ def predict (Community_Area,
 # Month = date_picked.month
 # Day = date_picked.day
 # Weekday = date_picked.dayofweek 
-    assert type(date_picked) == str
-    date_picked = pd.to_datetime(date_picked)
-    assert type(date_picked) == pd.Timestamp
+#     assert type(date_picked) == str
+#     date_picked = pd.to_datetime(date_picked)
+#     assert type(date_picked) == pd.Timestamp
     # Extract the month, day, weekday
 
     # Construct a dateframe with all features
     df=pd.DataFrame(
         columns = ['Community_Area',
                    'Average_Temperature',
-                   'Month'
-                   'Day'
-                   'Weekday'],
+                   'date'],
         data =[[Community_Area,
         Average_Temperature,
-        Month,
-        Day,
-        Weekday]]
+        date]]
     )
 
     y_pred = pipeline.predict(df)[0]

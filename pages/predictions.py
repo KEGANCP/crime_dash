@@ -229,9 +229,9 @@ layout = dbc.Row([column1, column2])
 )
 Month = date_picked.month
 Day = date_picked.day
-Weekday = date_picked.dayofweekdef 
+Weekday = date_picked.dayofweek 
     
-    predict (Community_Area,
+def predict (Community_Area,
              Average_Temperature,
              Month,
              Day,

@@ -262,10 +262,10 @@ def predict (Community_Area,
     output2 = daq.Gauge(id='my-daq-gauge',
                         showCurrentValue=True,
                         units="Crimes",
-                        max=700,
+                        max=1000,
                         value=y_pred,
-                        min=0,
-                        color={"gradient":True,"ranges":{"teal":[0,250],"blue":[250,500],"magenta":[500,700]}},
+                        min=200,
+                        color={"gradient":True,"ranges":{"teal":[200,500],"blue":[500,700],"magenta":[700,1000]}},
                         size=600)  
     return output1 , output2
 # @app.callback(

@@ -227,9 +227,7 @@ layout = dbc.Row([column1, column2])
     Input('Average_Temperature', 'value'),
     Input('date-picker-single', 'date')],
 )
-# Month = date_picked.month
-# Day = date_picked.day
-# Weekday = date_picked.dayofweek 
+
     
 def predict (Community_Area,
              Average_Temperature,
@@ -237,6 +235,9 @@ def predict (Community_Area,
              Day,
              Weekday):
     # Convert the date from a string to a Timestamp
+Month = date_picked.month
+Day = date_picked.day
+Weekday = date_picked.dayofweek 
     assert type(date_picked) == str
     date_picked = pd.to_datetime(date_picked)
     assert type(date_picked) == pd.Timestamp

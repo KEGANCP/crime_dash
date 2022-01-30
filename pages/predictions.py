@@ -27,7 +27,7 @@ from datetime import datetime as dt
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 import joblib
-pipeline = joblib.load ('assets/model.joblib')
+pipeline = joblib.load ('assets/feature_model.joblib')
 
 
 
@@ -165,7 +165,7 @@ column1 = dbc.Col(
                     {'label': "O'hare", 'value': '76'},
                     {'label': 'Edgewater', 'value': '77'}
                 ],
-                value='25'
+                value='66'
             ), 
             html.Br(), 
 

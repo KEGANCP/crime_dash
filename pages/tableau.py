@@ -76,4 +76,4 @@ column2 = dbc.Container(
 #     )
 # )
 
-layout = dbc.Row([column1, column2, column3]) 
+layout = dbc.Row([column1, column2]) 

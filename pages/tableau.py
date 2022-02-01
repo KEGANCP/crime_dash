@@ -4,13 +4,13 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-import base64
+# import base64
 
 # Imports from this application
 from app import app
 
-image_filename = 'tab.png' 
-tab = base64.b64encode(open(image_filename, 'rb').read())
+# image_filename = 'tab.png' 
+# tab = base64.b64encode(open(image_filename, 'rb').read())
 
 # 1 column layout
 column1 = dbc.Col(

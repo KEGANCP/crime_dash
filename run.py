@@ -7,7 +7,7 @@ import flask
 
 # Imports from this application
 from app import app, server
-from pages import index, predictions, GitHub, Index
+from pages import index, predictions, GitHub, tableau
 
 # Navbar 
 navbar = dbc.NavbarSimple(
@@ -16,7 +16,7 @@ navbar = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
         dbc.NavItem(dcc.Link('GitHub', href='/GitHub', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Index', href='/Index', className='nav-link'))
+        dbc.NavItem(dcc.Link('Index', href='/tableau', className='nav-link'))
     ],
     sticky='top',
     color='dark', 
@@ -45,7 +45,7 @@ def display_page(pathname):
         return predictions.layout
     elif pathname == '/GitHub':
         return GitHub.layout
-    elif pathname == '/Index':
+    elif pathname == '/tableau':
         return tableau.layout       
     else:
         return dcc.Markdown('## Page not found')

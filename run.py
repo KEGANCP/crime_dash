@@ -3,10 +3,11 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
+import flask 
 
 # Imports from this application
 from app import app, server
-from pages import index, predictions, GitHub, tableau
+from pages import index, predictions, GitHub, Index
 
 # Navbar 
 navbar = dbc.NavbarSimple(
@@ -15,7 +16,7 @@ navbar = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
         dbc.NavItem(dcc.Link('GitHub', href='/GitHub', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Tableau', href='/tableau', className='nav-link'))
+        dbc.NavItem(dcc.Link('Index', href='/Index', className='nav-link'))
     ],
     sticky='top',
     color='dark', 
@@ -44,7 +45,7 @@ def display_page(pathname):
         return predictions.layout
     elif pathname == '/GitHub':
         return GitHub.layout
-    elif pathname == '/tableau':
+    elif pathname == '/Index':
         return tableau.layout       
     else:
         return dcc.Markdown('## Page not found')

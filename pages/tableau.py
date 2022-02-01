@@ -19,7 +19,7 @@ column1 = dbc.Col(
             """
         
             ## Tableau
-            View our Tableau Dashboard here: https://public.tableau.com/views/chicago_crime_story_2/ChicagoCrimeDashboard?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+            View the below link to view our interactive dashboard via Tableau. These visualizations will provide a good source of our analysis between the correlation between weather and crime in chicago. 
             """
         ),
 
@@ -58,22 +58,22 @@ column2 = dbc.Container(
 #     )
 # )
 
-column3 = dbc.Container(
-    dbc.Row(
-        dbc.Col(
-            html.P(
-                [
-                    html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
-                    def b64_image(image_filename):
-                         with open(image_filename, 'rb') as f:
-                            image = f.read()
-                        return 'data:image/png;base64,' + base64.b64encode(image).decode('utf-8'))
-                ], 
-                className='lead'
+# column3 = dbc.Container(
+#     dbc.Row(
+#         dbc.Col(
+#             html.P(
+#                 [
+#                     html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
+#                     def b64_image(image_filename):
+#                          with open(image_filename, 'rb') as f:
+#                             image = f.read()
+#                         return 'data:image/png;base64,' + base64.b64encode(image).decode('utf-8'))
+#                 ], 
+#                 className='lead'
                
-            )
-        )
-    )
-)
+#             )
+#         )
+#     )
+# )
 
-layout = dbc.Row([column1, column2, column3]) html.Img(src=b64_image(image_filename))
+layout = dbc.Row([column1, column2, column3]) 

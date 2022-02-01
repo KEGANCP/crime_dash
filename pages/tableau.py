@@ -1,24 +1,53 @@
-# Import libraries
 import dash
-import dash_bootstrap_components as dbc
-import dash_core_components as dcc
 import dash_html_components as html
-from dash.dependencies import Input, Output
 import base64
 
+app = dash.Dash()
 
-# Imports from this application
-from app import app
+image_filename = 'tab.png' # replace with your own image
+encoded_image = base64.b64encode(open(image_filename, 'rb').read())
+
+app.layout = html.Div([
+    html.Img(src='data:image/png;base64,{}'.format(encoded_image))
+])
+
+if __name__ == '__main__':
+    app.run_server(debug=True)
 
 
-image_filename = 'tab.png'
 
-def b64_image(image_filename):
-    with open(image_filename, 'rb') as f:
-        image = f.read()
-    return 'data:image/png;base64,' + base64.b64encode(image).decode('utf-8')
 
-app.layout = html.Img(src=b64_image(image_filename))
+
+
+
+
+
+
+
+
+
+
+# Import libraries
+# import dash
+# import dash_bootstrap_components as dbc
+# import dash_core_components as dcc
+# import dash_html_components as html
+# from dash.dependencies import Input, Output
+# import base64
+
+
+# # Imports from this application
+# from app import app
+
+
+# image_filename = 'tab.png'
+
+# def b64_image(image_filename):
+#     with open(image_filename, 'rb') as f:
+#         image = f.read()
+#     return 'data:image/png;base64,' + base64.b64encode(image).decode('utf-8')
+
+# app.layout = html.Img(src=b64_image(image_filename))
 
 # 1 column layout
 # column1 = dbc.Col(

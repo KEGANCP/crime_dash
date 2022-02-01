@@ -27,7 +27,7 @@ from datetime import datetime as dt
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 import joblib
-pipeline = joblib.load ('assets/feature_model.joblib')
+pipeline = joblib.load ('assets/model2.joblib')
 
 
 

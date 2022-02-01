@@ -16,7 +16,7 @@ navbar = dbc.NavbarSimple(
     children=[
         dbc.NavItem(dcc.Link('Predictions', href='/predictions', className='nav-link')), 
         dbc.NavItem(dcc.Link('GitHub', href='/GitHub', className='nav-link')), 
-        dbc.NavItem(dcc.Link('Index', href='/tableau', className='nav-link'))
+        dbc.NavItem(dcc.Link('tableau', href='/tableau', className='nav-link'))
     ],
     sticky='top',
     color='dark', 

@@ -4,9 +4,9 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-import base64
+# import base64
 
-app.layout = html.Div(html.Img(src=app.get_asset_url('tab.png')))
+# app.layout = html.Div(html.Img(src=app.get_asset_url('tab.png')))
 # Imports from this application
 from app import app
 

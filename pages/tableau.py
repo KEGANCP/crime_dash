@@ -4,7 +4,7 @@ import base64
 
 app = dash.Dash()
 
-image_filename = 'tab.png' # replace with your own image
+image_filename = '/assets/tab.png' # replace with your own image
 encoded_image = base64.b64encode(open(image_filename, 'rb').read())
 
 app.layout = html.Div([

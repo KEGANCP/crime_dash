@@ -10,7 +10,7 @@ import pandas as pd
 import numpy as np
 import plotly.graph_objects as go
 
-# external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
+external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 # crime_df = pd.read_csv('merged_data.csv', sep=',', error_bad_lines=False, index_col=False, dtype='unicode')
 # crime_df.head()

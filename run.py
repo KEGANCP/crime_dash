@@ -46,9 +46,9 @@ footer = dbc.Container(
             html.P(
                 [
                     html.Span('Crime Prediction Team', className='mr-2'), 
-                    html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank" <br/>),
-                    html.A("Sean Farr", href='https://www.linkedin.com/in/kegan-propster', target="_blank" <br/>),
-                    html.A("Austen Marden", href='https://www.linkedin.com/in/kegan-propster', target="_blank" <br/>)
+                    html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank"),
+                    html.A("Sean Farr", href='https://www.linkedin.com/in/kegan-propster', target="_blank"),
+                    html.A("Austen Marden", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
                 ], 
                 className='lead'
                

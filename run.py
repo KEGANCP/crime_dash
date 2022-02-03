@@ -3,8 +3,6 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-import flask 
-# import dash_dangerously_set_inner_html
 
 # Imports from this application
 from app import app, server
@@ -25,22 +23,6 @@ navbar = dbc.NavbarSimple(
     dark=True
 )
 
-# footer = dbc.Col(
-#     [
-#         dcc.Markdown(
-#             """
-        
-#             ### Crime Prediction Team
-#             ##### Kegan Propster
-#             ##### Sean Farr
-#             ##### Austen Marden
-#             """
-#         ),
-        
-#     ],
-#     md=4,
-# )
-
 footer = dbc.Container(
     dbc.Row(
         dbc.Col(
@@ -48,35 +30,14 @@ footer = dbc.Container(
                 [
                     html.Span('Crime Prediction Team', className='mr-2'),
                     html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank"),
-                    html.A("Sean Farr", href='https://www.linkedin.com/in/kegan-propster', target="_blank"),
-                    html.A("Austen Marden", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
+                    html.A("Sean Farr", href='https://www.linkedin.com/in/sean-farr-462171135', target="_blank"),
+                    html.A("Austen Marden", href='https://www.linkedin.com/in/austen-marden-821640110', target="_blank")
                 ], 
                 className='row'          
             )
         )
     )
 )
-
-# footer = html.Div([
-#     html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
-# ])
-
-# footer = dbc.Container(
-#     dbc.Row(
-#         dbc.Col(
-#             html.P(
-#                 [
-#                     html.Span('Crime Prediction Team', className='mr-2'), 
-#                     html.A(html.I(className='fas fa-envelope-square mr-1'), href='mailto:antonio.j.peterson@gmail.com'), 
-#                     html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/ChicagoDataScientist/chicago-crime'),
-#                     html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/petersonaj/'), 
-#                     html.A(html.I(className='fab fa-twitter-square mr-1'), href='https://twitter.com/DataScienceTony'), 
-#                 ], 
-#                 className='lead'
-#             )
-#         )
-#     )
-# )
 
 # Layout 
 app.layout = html.Div([
@@ -106,5 +67,4 @@ def display_page(pathname):
 # Run app server
 if __name__ == '__main__':
     app.run_server(debug=True)
-
 

@@ -29,10 +29,10 @@ footer = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Crime Prediction Team
-            #### Kegan Propster
-            #### Sean Farr
-            #### Austen Marden
+            ### Crime Prediction Team
+            ##### Kegan Propster
+            ##### Sean Farr
+            ##### Austen Marden
             """
         ),
         

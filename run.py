@@ -24,6 +24,20 @@ navbar = dbc.NavbarSimple(
     dark=True
 )
 
+footer = dbc.Container(
+    dbc.Row(
+        dbc.Col(
+            html.P(
+                [
+                    html.Span('Crime Prediction Team', className='mr-2'), 
+                    html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/kegan-propster'), 
+                    html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/kegan-propster/'), 
+                    html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/kegan-propster/')                ], 
+                className='lead'
+            )
+        )
+    )
+)
 
 
 # Layout 
@@ -32,6 +46,7 @@ app.layout = html.Div([
     navbar, 
     dbc.Container(id='page-content', className='mt-4'), 
     html.Hr(),
+    footer
 ])
 
 

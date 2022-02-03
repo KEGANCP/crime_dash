@@ -59,7 +59,7 @@ column2 = dbc.Container(
 #     )
 # )
 
-crime_df = pd.read_csv('/data/crime.csv', sep=',', error_bad_lines=False, index_col=False, dtype='unicode')
+crime_df = pd.read_csv('crime.csv', sep=',', error_bad_lines=False, index_col=False, dtype='unicode')
 crime_df.head()
 s1 = crime_df[crime_df['Violence Status']=='VIOLENT']
 s2 = crime_df[crime_df['Violence Status']=='NON-VIOLENT']

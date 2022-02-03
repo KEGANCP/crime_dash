@@ -24,21 +24,39 @@ navbar = dbc.NavbarSimple(
     dark=True
 )
 
-footer = dbc.Container(
-    dbc.Row(
-        dbc.Col(
-            html.P(
-                [
-                    html.Span('Crime Prediction Team', className='mr-2'), 
-#                         html.Span('Kegan Propster', className='mr-1), 
-#                         html.Span('Sean Farr', className='mr-1), 
-#                         html.Span('Austen Marden', className='mr-1)                ], 
-                className='lead'
-            )
-        )
-    )
+footer = dbc.Col(
+    [
+        dcc.Markdown(
+            """
+        
+            ## Crime Prediction Team
+                - Kegan Propster
+                - Sean Farr
+                - Austen Marden
+            """
+        ),
+        
+    ],
+    md=4,
 )
 
+
+# footer = dbc.Container(
+#     dbc.Row(
+#         dbc.Col(
+#             html.P(
+#                 [
+#                     html.Span('Crime Prediction Team', className='mr-2'), 
+#                     html.A(html.I(className='fas fa-envelope-square mr-1'), href='mailto:antonio.j.peterson@gmail.com'), 
+#                     html.A(html.I(className='fab fa-github-square mr-1'), href='https://github.com/ChicagoDataScientist/chicago-crime'),
+#                     html.A(html.I(className='fab fa-linkedin mr-1'), href='https://www.linkedin.com/in/petersonaj/'), 
+#                     html.A(html.I(className='fab fa-twitter-square mr-1'), href='https://twitter.com/DataScienceTony'), 
+#                 ], 
+#                 className='lead'
+#             )
+#         )
+#     )
+# )
 
 # Layout 
 app.layout = html.Div([

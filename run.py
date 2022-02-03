@@ -50,6 +50,9 @@ footer = dbc.Container(
                     html.A("Sean Farr", href='https://www.linkedin.com/in/kegan-propster', target="_blank"),
                     html.A("Austen Marden", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
                 ], 
+                [
+                    html.A("Austen Marden", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
+                ]
                 className='lead'
                
             )

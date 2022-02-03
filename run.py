@@ -40,21 +40,25 @@ navbar = dbc.NavbarSimple(
 #     md=4,
 # )
 
-footer = dbc.Container(
-    dbc.Row(
-        dbc.Col(
-            html.P(
-                [
-                    html.Span('Crime Prediction Team', className='mr-2'), 
-                    html.A(html.Button('Kegan Propster', className='three columns'),
-                        href='https://www.linkedin.com/in/kegan-propster')
-                ], 
-                className='lead'
+# footer = dbc.Container(
+#     dbc.Row(
+#         dbc.Col(
+#             html.P(
+#                 [
+#                     html.Span('Crime Prediction Team', className='mr-2'), 
+#                     html.A(html.Button('Kegan Propster', className='three columns'),
+#                         href='https://www.linkedin.com/in/kegan-propster')
+#                 ], 
+#                 className='lead'
                
-            )
-        )
-    )
-)
+#             )
+#         )
+#     )
+# )
+
+footer = html.Div([
+    html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
+])
 
 # footer = dbc.Container(
 #     dbc.Row(

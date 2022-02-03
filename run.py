@@ -42,11 +42,11 @@ navbar = dbc.NavbarSimple(
 
 footer = dbc.Container(
     dbc.Row(
+        html.Span('Crime Prediction Team', className='mr-2'),
         dbc.Col(
             html.P(
                 [
-                    html.Span('Crime Prediction Team', className='mr-2'), 
-                    html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank")),
+                    html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank"),
                     html.A("Sean Farr", href='https://www.linkedin.com/in/kegan-propster', target="_blank"),
                     html.A("Austen Marden", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
                 ], 
@@ -56,21 +56,7 @@ footer = dbc.Container(
         )
     )
 )
-    dbc.Row(
-        dbc.Col(
-            html.P(
-                [
-                    html.Span('Crime Prediction Team', className='mr-2'), 
-                    html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank")),
-                    html.A("Sean Farr", href='https://www.linkedin.com/in/kegan-propster', target="_blank"),
-                    html.A("Austen Marden", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
-                ], 
-                className='lead'
-               
-            )
-        )
-    )
-)
+
 # footer = html.Div([
 #     html.A("Kegan Propster", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
 # ])

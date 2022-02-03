@@ -4,6 +4,7 @@ import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
+import pandas as pd
 # import base64
 
 # Imports from this application
@@ -58,7 +59,7 @@ column2 = dbc.Container(
 #     )
 # )
 
-crime_df = pd.read_csv('data/crime.csv', sep=',', error_bad_lines=False, index_col=False, dtype='unicode')
+crime_df = pd.read_csv('/data/crime.csv', sep=',', error_bad_lines=False, index_col=False, dtype='unicode')
 crime_df.head()
 s1 = crime_df[crime_df['Violence Status']=='VIOLENT']
 s2 = crime_df[crime_df['Violence Status']=='NON-VIOLENT']

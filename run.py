@@ -24,22 +24,37 @@ navbar = dbc.NavbarSimple(
     dark=True
 )
 
-footer = dbc.Col(
-    [
-        dcc.Markdown(
-            """
+# footer = dbc.Col(
+#     [
+#         dcc.Markdown(
+#             """
         
-            ### Crime Prediction Team
-            ##### Kegan Propster
-            ##### Sean Farr
-            ##### Austen Marden
-            """
-        ),
+#             ### Crime Prediction Team
+#             ##### Kegan Propster
+#             ##### Sean Farr
+#             ##### Austen Marden
+#             """
+#         ),
         
-    ],
-    md=4,
-)
+#     ],
+#     md=4,
+# )
 
+footer = dbc.Container(
+    dbc.Row(
+        dbc.Col(
+            html.P(
+                [
+                    html.Span('Crime Prediction Team', className='mr-2'), 
+                    html.A(html.Button('Kegan Propster', className='three columns'),
+                        href='https://www.linkedin.com/in/kegan-propster')
+                ], 
+                className='lead'
+               
+            )
+        )
+    )
+)
 
 # footer = dbc.Container(
 #     dbc.Row(

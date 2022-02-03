@@ -52,7 +52,7 @@ footer = dbc.Container(
                 ], 
                 [
                     html.A("Austen Marden", href='https://www.linkedin.com/in/kegan-propster', target="_blank")
-                ]
+                ],
                 className='lead'
                
             )

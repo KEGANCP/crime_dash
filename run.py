@@ -30,9 +30,9 @@ footer = dbc.Col(
             """
         
             ## Crime Prediction Team
-                - Kegan Propster
-                - Sean Farr
-                - Austen Marden
+                    Kegan Propster
+                    Sean Farr
+                    Austen Marden
             """
         ),
         

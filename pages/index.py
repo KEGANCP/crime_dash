@@ -76,6 +76,9 @@ column2 = dbc.Col(
             """
         
             We have selected this topic to determine what correlation certain weather patterns have on violent crimes committed within Chicago. 
+            
+            Utilizing advanced machine learning models, let our interactive analysis determine potential crime by Date, Temperature, and Neighborhood within chicago.
+            
             Our analysis could be useful for a wide range of purpose; from those seeking potential vacation travel to Chicago, to law 
             enforcement better equipped to forecast violent crime within their precinct. 
             """

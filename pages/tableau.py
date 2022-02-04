@@ -47,9 +47,9 @@ column3 = html.Div([
             html.Img(
                 src='https://i.imgur.com/vt2qfJ4.png',
                 style={
-                    'height' : '4%',
-                    'width' : '4%',
-                    'float' : 'right',
+                    'height' : '100%',
+                    'width' : '100%',
+                    'float' : 'center',
                     'position' : 'relative',
                     'padding-top' : 0,
                     'padding-right' : 0

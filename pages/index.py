@@ -58,17 +58,16 @@ column1 = dbc.Col(
         dcc.Markdown(
             """
         
-            ## Predict crime in Chicago 
+            ## Predict Crime in Chicago 
             """
         ),
-        # dcc.Link(dbc.Button('Predict Crime', color='primary'), href='/predictions')
     ],
     md=4,
 )
 
-gapminder = px.data.gapminder()
-fig = px.scatter(gapminder.query("year==2019"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
-           hover_name="country", log_x=True, size_max=60)
+# gapminder = px.data.gapminder()
+# fig = px.scatter(gapminder.query("year==2019"), x="gdpPercap", y="lifeExp", size="pop", color="continent",
+#            hover_name="country", log_x=True, size_max=60)
 
 column2 = dbc.Col(
     [

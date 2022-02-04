@@ -42,21 +42,36 @@ column2 = dbc.Container(
     )
 )
 
-column3 = dbc.Container(
-    dbc.Row(
-        dbc.Col(
-            html.P(
-                [
-                    html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
-                    html.Iframe(src="https://public.tableau.com/app/profile/austen.marden/viz/chicago_crime_story_2/ChicagoCrimeDashboard?publish=yes",
-                                style={"height": "1067px", "width": "100%"})
-                ], 
-                className='lead'
+column3 = html.Div([
+    html.A([
+            html.Img(
+                src='https://i.imgur.com/vt2qfJ4.png',
+                style={
+                    'height' : '4%',
+                    'width' : '4%',
+                    'float' : 'right',
+                    'position' : 'relative',
+                    'padding-top' : 0,
+                    'padding-right' : 0
+                })
+    ], href='https://chicagocrimepredictions.herokuapp.com/tableau')
+]) 
+
+# column3 = dbc.Container(
+#     dbc.Row(
+#         dbc.Col(
+#             html.P(
+#                 [
+#                     html.Span('Chicago Crime & Weather Visualizations', className='mr-2'), 
+#                     html.Iframe(src="https://public.tableau.com/app/profile/austen.marden/viz/chicago_crime_story_2/ChicagoCrimeDashboard?publish=yes",
+#                                 style={"height": "1067px", "width": "100%"})
+#                 ], 
+#                 className='lead'
                
-            )
-        )
-    )
-)
+#             )
+#         )
+#     )
+# )
 
 # column3 = dbc.Container(
 #     dbc.Row(
